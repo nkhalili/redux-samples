@@ -9,3 +9,12 @@ export const goal = (state=10, action) => {
   }
 
 }
+
+export const skiDay = (state=null, action) => {
+
+  if(action.type === C.ADD_DAY) {
+    return action.payload
+  } else {
+    return state
+  }
+}
