@@ -96,3 +96,11 @@ Then, we need to tell Babel which transpiler to use:
 
 1. Create .babelrc file
 2. Add preset version
+
+### Configure start command in package.json
+
+```json
+  "scripts": {
+      "start": "./node_modules/.bin/babel-node ./src/index.js" // index.js is default, so you can just say ./src/
+    },
+```
