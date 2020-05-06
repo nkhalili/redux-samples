@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nkhalili/redux-samples/issues"
   },
-  "homepage": "https://github.com/nkhalili/redux-samples#readme"
+  "homepage": "https://github.com/nkhalili/redux-samples#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
 }

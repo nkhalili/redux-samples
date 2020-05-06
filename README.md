@@ -69,3 +69,11 @@ To init the project:
 ```powershell
   npm init
 ```
+
+### Babel.js
+
+To install babel CLI
+
+```powershell
+  npm install babel-cli --save-dev
+```
