@@ -77,3 +77,9 @@ To install babel CLI
 ```powershell
   npm install babel-cli --save-dev
 ```
+
+To use the latest features of the ES6 spec, we need to install its presets:
+
+```powershell
+  npm install babel-preset-latest --save-dev
+```
