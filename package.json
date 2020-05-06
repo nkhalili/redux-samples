@@ -1,0 +1,19 @@
+{
+  "name": "ski-day-counter",
+  "version": "1.0.0",
+  "description": "To build a data store (container) that manages all of the application states.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkhalili/redux-samples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkhalili/redux-samples/issues"
+  },
+  "homepage": "https://github.com/nkhalili/redux-samples#readme"
+}

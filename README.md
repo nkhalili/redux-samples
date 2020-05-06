@@ -59,3 +59,13 @@ In functional paradigm we are concerning with the **verbs** instead of nouns (un
 
 - You need to identify all of your **actions** (**constants.js**)
 - The variables that these actions impact is our **State** (**initialState.json**).
+
+## Requirements
+
+### Node.js
+
+To init the project:
+
+```powershell
+  npm init
+```
