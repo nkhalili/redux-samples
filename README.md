@@ -83,3 +83,11 @@ To use the latest features of the ES6 spec, we need to install its presets:
 ```powershell
   npm install babel-preset-latest --save-dev
 ```
+
+To use experimental features of the ES6 spec, we need to install this presets:
+
+```powershell
+  npm install babel-preset-stage-0 --save-dev
+```
+
+We use these presets to **transpile** our ES6 code to javascript.
