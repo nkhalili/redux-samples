@@ -91,3 +91,8 @@ To use experimental features of the ES6 spec, we need to install this presets:
 ```
 
 We use these presets to **transpile** our ES6 code to javascript.
+
+Then, we need to tell Babel which transpiler to use:
+
+1. Create .babelrc file
+2. Add preset version
