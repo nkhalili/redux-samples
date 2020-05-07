@@ -69,6 +69,9 @@ export const fetching = (state=false, action) => {
     case C.FETCH_RESORT_NAMES:
       return true
     
+    case C.CANCEL_FETCHING:
+      return false
+
     default:
       return state
   }

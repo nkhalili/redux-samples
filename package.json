@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/babel-node ./src/index.js",
-    "challenge-a": "./node_modules/.bin/babel-node ./src/challenges/FETCH_RESORT_NAMES.js"
+    "challenge-a": "./node_modules/.bin/babel-node ./src/challenges/FETCH_RESORT_NAMES.js",
+    "challenge-b": "./node_modules/.bin/babel-node ./src/challenges/CANCEL_FETCHING.js"
   },
   "repository": {
     "type": "git",
