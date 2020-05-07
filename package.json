@@ -4,7 +4,8 @@
   "description": "To build a data store (container) that manages all of the application states.",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/babel-node ./src/index.js"
+    "start": "./node_modules/.bin/babel-node ./src/index.js",
+    "challenge-a": "./node_modules/.bin/babel-node ./src/challenges/FETCH_RESORT_NAMES.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-latest": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "expect": "^26.0.1"
   }
 }
