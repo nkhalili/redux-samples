@@ -14,7 +14,7 @@ const action = {
   type: C.ADD_DAY,
   payload: {
     "resort": "Boreal",
-    "date": "2016-10-20",
+    "date": "2016-10-11",
     "powder": false,
     "backcountry": false
   }
