@@ -7,7 +7,8 @@
     "start": "./node_modules/.bin/babel-node ./src/index.js",
     "challenge-a": "./node_modules/.bin/babel-node ./src/challenges/FETCH_RESORT_NAMES.js",
     "challenge-b": "./node_modules/.bin/babel-node ./src/challenges/CANCEL_FETCHING.js",
-    "challenge-c": "./node_modules/.bin/babel-node ./src/challenges/CLEAR_SUGGESTIONS.js"
+    "challenge-c": "./node_modules/.bin/babel-node ./src/challenges/CLEAR_SUGGESTIONS.js",
+    "challenge-d": "./node_modules/.bin/babel-node ./src/challenges/CHANGE_SUGGESTIONS.js"
   },
   "repository": {
     "type": "git",
