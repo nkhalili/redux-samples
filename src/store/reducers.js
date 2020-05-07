@@ -77,7 +77,7 @@ export const fetching = (state=false, action) => {
   }
 }
 
-export const suggestions = (state, action) => {
+export const suggestions = (state=[], action) => {
 
   switch(action.type) {
 
