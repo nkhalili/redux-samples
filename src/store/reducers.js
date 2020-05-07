@@ -75,5 +75,16 @@ export const fetching = (state=false, action) => {
     default:
       return state
   }
+}
 
+export const suggestions = (state, action) => {
+
+  switch(action.type) {
+
+    case C.CLEAR_SUGGESTIONS:
+      return []
+
+    default:
+      return state
+  }
 }
