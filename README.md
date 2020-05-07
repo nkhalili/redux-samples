@@ -104,3 +104,9 @@ Then, we need to tell Babel which transpiler to use:
       "start": "./node_modules/.bin/babel-node ./src/index.js" // index.js is default, so you can just say ./src/
     },
 ```
+
+## To use Redux
+
+```powershell
+  npm install redux --save
+```
