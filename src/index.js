@@ -1,21 +1,30 @@
 import C from './constants'
-import { error } from './store/reducers'
+import { allSkiDays } from './store/reducers'
 
 const state = [
-  "error #1",
-  "error #2"
+  {
+    "resort": "Kirkwood",
+    "date": "2016-10-11",
+    "powder": true,
+    "backcountry": false
+  }
 ]
 
 const action = {
-  type: C.CLEAR_ERROR,
-  payload: 0
+  type: C.ADD_DAY,
+  payload: {
+    "resort": "Boreal",
+    "date": "2016-10-20",
+    "powder": false,
+    "backcountry": false
+  }
 }
 
-const nextState = error(state, action)
+const nextState = allSkiDays(state, action)
 
 console.log(`
 
-  initial state: ${state}
+  initial state: ${JSON.stringify(state)}
   action: ${JSON.stringify(action)}
   new state: ${JSON.stringify(nextState)}
 
