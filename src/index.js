@@ -1,19 +1,17 @@
 import C from './constants'
-import { skiDay } from './store/reducers'
+import { error } from './store/reducers'
 
-const state = null
+const state = [
+  "error #1",
+  "error #2"
+]
 
 const action = {
-  type: C.ADD_DAY,
-  payload: {
-    "resort": "Heavenly",
-    "date": "2016-12-16",
-    "powder": true,
-    "backcountry": false
-  }
+  type: C.ADD_ERROR,
+  payload: "error #3"
 }
 
-const nextState = skiDay(state, action)
+const nextState = error(state, action)
 
 console.log(`
 
