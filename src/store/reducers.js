@@ -25,6 +25,14 @@ export const error = (state=[], action) => {
         action.payload
       ]
 
+    case C.CLEAR_ERROR:
+
+      // filter will create a new array for us (the state stays immutable)
+      // needs a callback function
+      // this function is predicate it returns either true or false. 
+      // if returns true it will add the item to our new array
+      return state.filter((message, i) => i !== action.payload)
+
     default:
       return state
   } 

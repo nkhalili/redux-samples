@@ -7,8 +7,8 @@ const state = [
 ]
 
 const action = {
-  type: C.ADD_ERROR,
-  payload: "error #3"
+  type: C.CLEAR_ERROR,
+  payload: 0
 }
 
 const nextState = error(state, action)
