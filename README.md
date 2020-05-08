@@ -110,3 +110,52 @@ Then, we need to tell Babel which transpiler to use:
 ```powershell
   npm install redux --save
 ```
+
+## Using Webpack
+
+To run our application inside the browser, instead of the server (e.g. Node JS) we need to install **webpack**.
+
+1. So, the first step is to install webpack in order to create bundle.js file:
+
+   ```powershell
+    npm install webpack --save-dev
+   ```
+
+2. To install **webpack dev server** (will help to automatically recreate the bundle on any changes):
+
+   ```powershell
+    npm install webpack-web-server --save-dev
+   ```
+
+3. With webpack we need to use loaders. **Loaders** are the instructions that webpack follows when transpiling our code and creating the bundle.
+
+   - The first loader is *babel-loader* (to transpile ES6 to ES5)
+
+   ```powershell
+     npm install babel-loader --save-dev
+   ```
+
+   - For webpack < v2: Add json-loader for JSON documents (NOT for webpack > 2.0)
+
+   ```powershell
+     npm install json-loader --save-dev
+   ```
+
+   - Additionally to make sure babel-core has been installed
+
+   ```powershell
+     npm install @babel/core --save-dev
+   ```
+
+   **Changes:** need to change presets in compared to NodeJS
+
+   ```powershell
+     npm install @babel/preset-env --save-dev
+   ````
+
+   Change *.babelrc* file to use this preset.
+
+4. Add **webpack.config.js** and configure all (webpack, webpack dev server, and loaders).
+
+5. Use npm start to run dev server
+   - make sure to configure start command for node to use webpack-dev-server
