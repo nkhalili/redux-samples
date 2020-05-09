@@ -1,16 +1,18 @@
 import storeFactory from './store'
-import { addDay, removeDay, setGoal } from './actions'
+import { addError, clearError, changeSuggestions, clearSuggestions } from './actions'
 
 const store = storeFactory()
 
 store.dispatch(
-  addDay("Heavenly", "2016-12-22")
+  addError("Error")
 )
 
 store.dispatch(
-  removeDay("2016-12-22")
+  clearError(0)
 )
 
 store.dispatch(
-  setGoal(55)
+  changeSuggestions(['One', 'Two', 'Three'])
 )
+
+store.dispatch(clearSuggestions())
