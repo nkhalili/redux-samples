@@ -159,3 +159,15 @@ To run our application inside the browser, instead of the server (e.g. Node JS) 
 
 5. Use npm start to run dev server
    - make sure to configure start command for node to use webpack-dev-server
+
+## Adding Thunk middleware to Redux
+
+To control action's dispatching (async). For action-creators to wait for results before dispatching an action.
+
+1. Install the package
+
+   ```powershell
+     npm install redux-thunk --save
+   ```
+
+2. Add it to your store middleware
