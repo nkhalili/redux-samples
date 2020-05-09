@@ -2,11 +2,7 @@ import C from './constants'
 import appReducer from './store/reducers'
 import { createStore } from 'redux'
 
-const initialState = localStorage['redux-store'] ? 
-  JSON.parse(localStorage['redux-store']) :
-  {}
-
-const store = createStore(appReducer, initialState)
+const store = createStore(appReducer)
 
 const unsubscribeGoalLogger = store.subscribe(
   () => console.log(`   Goal: ${store.getState().goal}`)
