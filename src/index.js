@@ -1,18 +1,10 @@
 import storeFactory from './store'
-import { addError, clearError, changeSuggestions, clearSuggestions } from './actions'
+import { randomGoals } from './actions'
 
 const store = storeFactory()
 
-store.dispatch(
-  addError("Error")
-)
+// Even though we called randomGoals twice, it will run once!
 
-store.dispatch(
-  clearError(0)
-)
+store.dispatch(randomGoals())
 
-store.dispatch(
-  changeSuggestions(['One', 'Two', 'Three'])
-)
-
-store.dispatch(clearSuggestions())
+store.dispatch(randomGoals())
