@@ -8,26 +8,21 @@ const initialState = localStorage['redux-store'] ?
 
 const store = createStore(appReducer, initialState)
 
-// Will run the callback handler whenever call the dispatch method
-store.subscribe(() => console.log(store.getState()))
+const unsubscribeGoalLogger = store.subscribe(
+  () => console.log(`   Goal: ${store.getState().goal}`)
+)
 
-// Also save the state in our localStorage
-store.subscribe(() => {
-  const state = JSON.stringify(store.getState())
-  localStorage['redux-store'] = state
-})
+setInterval(() => {
 
-store.dispatch({
-  type: C.ADD_DAY,
-  payload: {
-    "resort": "Mt Shasta",
-    "date": "2016-10-28",
-    "powder": false,
-    "backcountry" : true
-  }
-})
+  store.dispatch({
+    type: C.SET_GOAL,
+    payload: Math.floor(Math.random() * 100)
+  })
 
-store.dispatch({
-  type: C.SET_GOAL,
-  payload: 2
-})
+}, 250)
+
+setTimeout(() => {
+
+  unsubscribeGoalLogger();
+  
+}, 3000)
