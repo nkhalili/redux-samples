@@ -1,4 +1,5 @@
 import C from './constants'
+import fetch from 'isomorphic-fetch'
 
 export function addDay(resort, date, powder=false, backcountry=false) {
 
@@ -64,4 +65,34 @@ export const randomGoals = () => (dispatch, getState) => {
     }, 1500)
   }
   
+}
+
+export const suggestResortNames = value => dispatch => {
+
+  dispatch({
+    type: C.FETCH_RESORT_NAMES
+  })
+
+  // isomorphic-fetch library returns a promise
+  // meaning that you can wait for async response
+  fetch('http://localhost:3333/resorts/' + value)
+    .then(response => response.json()) // uses response from fetch()
+    .then(suggestions => {  // uses return values from previous .then() callback function
+      
+      dispatch({ // dispatching action object
+        type: C.CHANGE_SUGGESTIONS,
+        payload: suggestions
+      })
+
+    })
+    .catch(error => {  // handles any errors to notify user
+      
+      dispatch(addError(error.message)) // using addError() action creator
+
+      dispatch({ // if any errors happen we must cancel the fetching
+        type: C.CANCEL_FETCHING
+      })
+
+    })
+
 }
