@@ -171,3 +171,9 @@ To control action's dispatching (async). For action-creators to wait for results
    ```
 
 2. Add it to your store middleware
+
+## Adding express server
+
+```powershell
+  npm install express --save
+```

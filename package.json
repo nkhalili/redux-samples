@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server",
+    "suggestions": "./node_modules/.bin/babel-node ./server --port 3333 --delay 500",
     "challenge-a": "./node_modules/.bin/babel-node ./src/challenges/FETCH_RESORT_NAMES.js",
     "challenge-b": "./node_modules/.bin/babel-node ./src/challenges/CANCEL_FETCHING.js",
     "challenge-c": "./node_modules/.bin/babel-node ./src/challenges/CLEAR_SUGGESTIONS.js",
@@ -21,7 +22,9 @@
   },
   "homepage": "https://github.com/nkhalili/redux-samples#readme",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.6",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.1.0",
@@ -32,6 +35,9 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "minimist": "^1.2.5",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   }
